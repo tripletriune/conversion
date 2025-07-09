@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyo
+*.pyd
+*.pdm.lock
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+
+# Environment / config files
+.env
+.env.*
+
+# VSCode / PyCharm / JetBrains
+.vscode/
+.idea/
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Pip tools
+pip-log.txt
+pip-delete-this-directory.txt
