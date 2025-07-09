@@ -5,12 +5,16 @@ from flask import Flask, session, redirect, url_for, request, jsonify
 from google_auth_oauthlib.flow import Flow
 from flask_cors import CORS
 from dotenv import load_dotenv
+from werkzeug.middleware.proxy_fix import ProxyFix  # <-- added
 
 # Load environment variables
 load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = os.getenv("FLASK_SECRET_KEY", "some_dev_secret")
+
+# Fix proxy so url_for generates https instead of http
+app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 
 # CORS to allow React on a different port to send cookies
 CORS(app, supports_credentials=True)
