@@ -37,3 +37,6 @@ dist/
 # Pip tools
 pip-log.txt
 pip-delete-this-directory.txt
+
+#flask_session/
+flask_session/
