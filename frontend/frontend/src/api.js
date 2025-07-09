@@ -1,5 +1,5 @@
 // src/api.js
-const BASE_URL = "http://localhost:5000"
+const BASE_URL = "https://conversion-e59b.onrender.com"
 
 export async function getProfile() {
   const res = await fetch(`${BASE_URL}/api/profile`, {

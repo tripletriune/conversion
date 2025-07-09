@@ -31,7 +31,7 @@ CLIENT_CONFIG = {
         "client_secret": CLIENT_SECRET,
         "auth_uri": "https://accounts.google.com/o/oauth2/auth",
         "token_uri": "https://oauth2.googleapis.com/token",
-        "redirect_uris": ["http://localhost:5000/callback"]
+        "redirect_uris": ["https://conversion-e59b.onrender.com/callback"]
     }
 }
 
@@ -111,7 +111,7 @@ def callback():
         'client_secret': credentials.client_secret,
         'scopes': credentials.scopes
     }
-    return redirect("http://localhost:5173")  # direct back to React after login
+    return redirect("https://conversion-1-g0am.onrender.com")  # direct back to React after login
 
 
 @app.route('/logout')
